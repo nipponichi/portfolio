@@ -211,7 +211,6 @@ header nav a:hover{
 }
 
 .escritor_h2 {
-
     animation: typing_h2 10s steps(1, end), barra_h2 0.75s step-end infinite;
     animation-delay: 11.5s;
     font-size: 27px;
@@ -304,6 +303,17 @@ header nav a:hover{
         border-color: black; 
     }
 }
+
+/*
+    NIGHT-DAY
+*/
+
+.cambio{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    cursor: pointer;
+}
   
 /*
     MAIN
@@ -336,6 +346,7 @@ header nav a:hover{
 /*
     BUTTON ANIMATION
 */
+
 .link-button {
     display: inline-block;
     padding: 16px 24px;
@@ -407,3 +418,5 @@ header nav a:hover{
 hr {
     width: 100%;
 }
+
+
