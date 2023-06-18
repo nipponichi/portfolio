@@ -1,0 +1,1 @@
+Descomprimir con opción "extraer en portfolio\" en carpeta HTDOCS.

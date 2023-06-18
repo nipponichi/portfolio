@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Javier López Sola">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripción" content="Contact with Javier López Sola">
+    <meta name="keywords" content="Contact, message, email, form">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style_contactus.css" rel="stylesheet" type="text/css">
+    <link  rel="icon" href="media/favicon.jpg" type="image/jpg"/>
+    <title>Get in touch&nbsp;|&nbsp;Javier López Sola</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <header id="arriba">
+                <nav name="top_menu">
+                    <div class="backToMain">
+                        <a href="index.html" title="Back to main" alt="Back to main">Back to main</a>
+                        <a href="projects.html" title="Projects" alt="Projects">Projects</a>
+                        <a href="aboutme.html" title="About me" alt="About me">About me</a>
+                    </div>
+                    <div class="languaje">
+                        <p>
+                            <a class="es" href="contacto.html" title="Spanish" alt="Spanish">ES</a>
+                            &nbsp;|&nbsp;
+                            <a class="en" href="contactus.html" title="English" alt="English">EN</a>
+                        </p>
+                    </div>
+                </nav>                  
+                <div class="envelope">
+                    <div class="envelope-front">
+                      <div class="sender">Your turn</div>
+                    </div>
+                    <div class="envelope-back">
+                      <div class="message">Message me</div>
+                    </div>
+                  </div>                  
+                <hr></hr>        
+            </header>
+        </div>
+        <div class="main">
+            <main>
+                <form action="php/gestion.php" method="post">
+                    <fieldset>
+                        <legend>Personal info</legend>
+                        <p><label for="name">Name:&nbsp;<input type="text" name="nombre" maxlength="20" placeholder="your name" autofocus="autofocus"></label></p>
+                        <p><label for="email">E-mail:&nbsp;<input type="email" name="email" maxlength="50" placeholder="your email@email.com"></label></p>
+                        <p><label for="telefono">Phone:&nbsp;<input type="tel" name="telefono" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" minlength="9" maxlength="9" placeholder="666999555"></label></p>
+                        <label for="reason">Reason:</label>&nbsp;
+                        <select name="reason">
+                        <option value="" disabled selected>--Choose an Option--</option><!--dejar esta opción visible pero no seleccionable-->
+                        <option value="work">Work</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="personal">Personal</option>
+                        <option value="suggestion">Suggestion</option>
+                        </select>
+                        <p>
+                            <label class="file_upload">
+                                <input type="file" name="subirDoc1[]" multiple="multiple" accept="application/*">
+                                <i class="fa fa-cloud-upload"></i> File upload
+                            </label>
+                        </p>
+                        <textarea name="descripcion" cols="50" rows="10" placeholder="Small description" maxlength="150"></textarea>
+                    </fieldset> 
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </form>
+                <div class="arrow_up">
+                    <a href="#arriba"><i class="fa-solid fa-circle-arrow-up arrow" title="Go up" alt="Go up"></i></a>      
+                </div>
+            </main>
+        </div>
+        <div class="footer">
+            <footer>
+                <hr></hr>
+                <nav name="social_media" class="social_media">
+                    <a href="https://twitter.com/JAVIERLMSGI" title="Twitter" alt="Twitter" target="_blank">
+                        <i class="fa-brands fa-twitter twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nippon_ichi/" title="Instagram" alt="Instagram" target="_blank">
+                        <i class="fa-brands fa-instagram instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJIT0KE6tB_ON4l7vTLMzuw" title="Youtube" alt="Youtube" target="_blank">
+                        <i class="fa-brands fa-youtube youtube"></i>
+                    </a>
+                    <a href="https://discord.gg/Fa4UEfde" title="Discord" alt="Discord" target="_blank">
+                        <i class="fa-brands fa-discord discord"></i>
+                    </a>
+                    <div class="footer_h5">
+                        <h5 title="JavierLopezDev">2023 | Javier López Sola | Developments</h5>
+                    </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

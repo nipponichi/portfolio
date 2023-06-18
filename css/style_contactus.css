@@ -1,0 +1,310 @@
+
+
+/*
+  BODY
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  margin: 10px;
+  padding: 0;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'header header header'
+                         'main main main'
+                        'footer footer footer';
+}
+  
+/*
+  HEADER
+*/
+
+.header {
+  grid-area: header;
+  width: 100%;
+}
+
+nav p {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top:-30px;
+}
+
+header nav a {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  padding: 2px 5px;
+}
+
+header nav a:hover{
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.en{
+  font-size:15px;
+}
+
+
+.es {
+  font-size: 10px;
+}
+
+.backToMain{
+  display: flex;
+  justify-content: start;
+}
+
+.backToMain a {
+  display:flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.backToMainArrow {
+  display:flex;
+  align-items: center;
+  padding-left: 3px;
+  font-size: 20px;
+}
+
+.backToMain a:hover{
+  text-shadow: 0 0 8px black;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/*
+  HEADER ANIMATION
+*/
+
+.envelope {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  margin: 50px auto;
+  box-shadow: 0px 0px 20px lightgrey;
+  border-radius: 10px;
+}
+
+.envelope-front,
+.envelope-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.envelope-front {
+  background-color: lightgray;
+  z-index: 2;
+  transform: rotateY(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope-back {
+  background-color: white;
+  transform: rotateY(-180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope:hover .envelope-front {
+  transform: rotateY(180deg);
+}
+
+.envelope:hover .envelope-back {
+  transform: rotateY(0deg);
+}
+
+.sender {
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.message {
+  padding: 40px;
+  text-align: center;
+  font-size: 36px;
+}
+
+
+/*
+  MAIN
+*/
+
+.main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow_up{
+  display: flex;
+  justify-content: end;
+  padding: 25px;
+}
+
+.arrow{
+  position: absolute;
+  color:black;
+  font-size: 20px;
+}
+
+.arrow:hover{
+  font-size:25px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="file"] {
+  display: none;
+}
+.file_upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*
+  FORM STYLE
+*/
+
+form {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+  
+fieldset {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+  
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+  
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: white;
+}
+  
+input[type="submit"],
+input[type="reset"] {
+  width: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1em;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+  
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+  
+
+/*
+  FOOTER
+*/
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+}
+
+.footer_h5{
+  display:grid;
+  justify-content: end;
+  margin-right: -25px;
+}
+
+.footer nav{
+  text-align: center;
+  margin-right: 30px;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  position: relative;
+}
+
+.footer i{
+  position: absolute;
+}
+.youtube:hover { 
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.discord:hover {
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.instagram:hover {
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.twitter:hover {  
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+hr {
+  width: 100%;
+}

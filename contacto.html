@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Javier López Sola">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripción" content="Contacto directo Javier López Sola">
+    <meta name="keywords" content="mensaje, contacto, email, formulario">
+    <title>Contacto&nbsp;|&nbsp;Javier López Sola</title>
+</head>
+<body>
+    <header id="arriba">
+        <nav name="languaje">
+            <a href="contacto.html" title="Español" alt="Español"><img src="media/spanishflag.jpg" alt="Spanish flag" width="24"></a>
+            <a href="contactus.html" title="Inglés" alt="Inglés"><img src="media/britishflag.jpg" alt="british flag" width="20"></a>
+        </nav>
+        <nav name="main_menu">
+            <a href="proyectos.html" title="Proyectos" alt="Proyectos">Proyectos&nbsp;|</a>
+            <a href="sobremi.html" title="Sobre mi" alt="Sobre mi">Sobre mi&nbsp;|</a>
+            <a href="indexes.html" title="Índice" alt="Página Principal">Página Principal</a>
+            <h1 align="center"><img src="media/contactus.gif" width="500" alt="Contacto" title="Javier López Contacto"></h1>
+        </nav>
+    </header>
+    <main>
+        <form action="php/gestion.php" method="post">
+        <fieldset>
+            <legend>Información personal</legend>
+            <p><label for="name">Nombre:&nbsp;<input type="text" name="nombre" maxlength="20" placeholder="nombre" autofocus="autofocus"></label></p>
+            <p><label for="email">E-mail:&nbsp;<input type="email" name="email" maxlength="50" placeholder="tu email@email.com"></label></p>
+            <p><label for="telefono">Teléfono:&nbsp;<input type="tel" name="telefono" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" minlength="9" maxlength="9" placeholder="666999555"></label></p>
+            <label for="reason">Razón:</label>&nbsp;
+            <select name="reason">
+            <option value="" disabled selected>--Elige una opción--</option><!--dejar esta opción visible pero no seleccionable-->
+            <option value="work">Trabajo</option>
+            <option value="commercial">Comercial</option>
+            <option value="personal">Personal</option>
+            <option value="suggestion">Sugerencias</option>
+            </select>
+            <p>
+                <label for="upload_file">Subir archivo:</label><!--subida de archivos múltiples-->
+                <input type="file" name="subirDoc1[]" multiple="multiple" accept="application/*">
+            </p>
+            <textarea name="descripcion" cols="50" rows="10" placeholder="Descripción corta" maxlength="150"></textarea>
+        </fieldset> 
+        <input type="submit" name="submit" value="Enviar">
+        <input type="reset" name="reset" value="Limpiar">
+        </form>
+        <p align="right"><a href="#arriba"><img src=media/flecha.jpg  alt="Ir arriba" width="30"></a></p>
+    </main>
+    <footer>
+        <hr>
+        <nav align="center" name="social_medial">
+            <a href="https://twitter.com/JAVIERLMSGI" title="JavierLopezDev" alt="Twitter" target="_blank"><img src="media/twitter1.jpg" alt="Twitter logo" width="20"></a>
+            <a href="https://www.instagram.com/nippon_ichi/" title="JavierLopezDev" alt="Instagram" target="_blank"><img src="media/instagram1.jpg" alt="Instagram logo" width="20"></a>
+            <a href="https://www.youtube.com/channel/UCJIT0KE6tB_ON4l7vTLMzuw" title="JavierLopezDev" alt="Youtube" target="_blank"><img src="media/youtube.jpg" alt="Youtube logo" width="20"></a>
+            <a href="https://discord.gg/Fa4UEfde" title="JavierLopezDev" alt="Discord" target="_blank"><img src="media/discord.jpg" alt="Discord logo" width="20"></a>
+        </nav>
+        <h5 align="center">2022 | Javier López Sola | Developments</h5>
+    </footer>
+</body>
+</html>

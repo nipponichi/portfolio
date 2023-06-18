@@ -1,0 +1,409 @@
+
+
+/*
+    BODY
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    margin: 10px;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'header header header'
+                         'main main main'
+                        'footer footer footer';
+}
+
+
+/*
+    HEADER
+*/
+
+.header {
+    grid-area: header;
+    width: 100%;
+}
+
+.header h1 {
+    display: grid;
+    justify-content: center;
+}
+
+.header h2 {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+nav p {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header nav a {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+header nav a:hover{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.en{
+    font-size:15px;
+}
+
+.es {
+    font-size: 10px;
+}
+
+
+
+/*
+    HEADER ANIMATION
+*/
+
+.escritor_h1 {
+    animation: typing_h1 10s steps(1, end), barra_h1 0.75s step-end infinite;
+    font-size: 35px;
+    white-space: pre;
+    overflow: hidden;
+    border-right: .15em solid black;
+    letter-spacing: 2px;
+    animation-fill-mode: both;
+    animation-iteration-count: 1,15;
+}
+
+@keyframes typing_h1 {
+    /*|*/
+    0% {
+        width: 1px;
+    }
+    /*|*/
+    3.8% {
+        width: 1px;
+    }
+    /*H*/
+    7.6% {
+        width: 27px;
+    }
+    /*o*/
+    11.4% {
+        width: 55px;
+    }
+    /*l*/
+    15.2% {
+        width: 63px;
+    }
+    /*a*/
+    19% {
+        width: 85px;
+    }
+    /*!*/
+    22.8% {
+        width: 95px;
+    }
+    /*|*/
+    26.6% {
+        width: 95px;
+    }
+    /*_*/
+    30.4% {
+        width: 112px;
+    }
+    /*|*/
+    34.2% {
+        width: 112px;
+    }
+    /*I*/
+    38% {
+        width: 120px;
+    }
+    /*'m*/
+    41.8% {
+        width: 166px;
+    }
+    /*|*/
+    45.6% {
+        width: 166px;
+    }
+    /*_*/
+    49.4% {
+        width: 179px;
+    }
+    /*J*/
+    53.2% {
+        width: 200px;
+    }
+    /*a*/
+    57% {
+        width: 219px;
+    }
+    /*v*/
+    60.8% {
+        width: 243px;
+    }
+    /*i*/
+    64.6% {
+        width: 254px;
+    }
+    /*e*/
+    68.4% {
+        width: 276px;
+    }
+    /*r*/
+    72.2% {
+        width: 294px;
+    }
+    /*|*/
+    76% {
+        width: 294px;
+    }
+    /*_*/
+    79.8% {
+        width: 305px;
+    }
+    /*L*/
+    83.6% {
+        width: 323px;
+    }
+    /*ó*/
+    87.4% {
+        width: 350px;
+    }
+    /*p*/
+    91.2% {
+        width: 374px;
+    }
+    /*e*/
+    95% {
+        width: 395px;
+    }
+    /*z*/
+    98.8% {
+        width: 417px;
+    }
+    /*|*/
+    100%{
+        width: 417px;
+    }
+    /* Incrementar segun el tamaño de cada letra */
+}
+
+@keyframes barra_h1 {
+    from, to { 
+        border-color: transparent; 
+    }
+    50% { 
+        border-color: black; 
+    }
+}
+
+.escritor_h2 {
+
+    animation: typing_h2 10s steps(1, end), barra_h2 0.75s step-end infinite;
+    animation-delay: 11.5s;
+    font-size: 27px;
+    white-space: pre;
+    overflow: hidden;
+    border-right: .15em solid black;
+    letter-spacing: 2px;
+    animation-fill-mode: both;
+    animation-iteration-count: 1,15;
+}
+
+@keyframes typing_h2 {
+    /*|*/
+    0% {
+        width: 1px;
+    }
+    /*|*/
+    6.25% {
+        width: 1px;
+    }
+    /*W*/
+    12.5% {
+        width: 29px;
+    }
+    /*e*/
+    18.75% {
+        width: 45px;
+    }
+    /*b*/
+    25% {
+        width: 66px;
+    }
+    /*|*/
+    31.25% {
+        width: 66px;
+    }
+    /*_*/
+    37.5% {
+        width: 76px;
+    }
+    /*D*/
+    43.75% {
+        width: 95px;
+    }
+    /*e*/
+    50% {
+        width: 114px;
+    }
+    /*v*/
+    56.25% {
+        width: 130px;
+    }
+    /*e*/
+    62.5% {
+        width: 150px;
+    }
+    /*l*/
+    68.75% {
+        width: 158px;
+    }
+    /*o*/
+    75% {
+        width: 176px;
+    }
+    /*p*/
+    81.25% {
+        width: 196px;
+    }
+    /*e*/
+    87.5% {
+        width: 215px;
+    }
+    /*r*/
+    93.75% {
+        width: 229px;
+    }
+    /*|*/
+    100% {
+        width: 229px;
+    }
+
+    /* Incrementar segun el tamaño de cada letra */
+}
+
+@keyframes barra_h2 {
+    from, to { 
+        border-color: transparent; 
+    }
+    50% { 
+        border-color: black; 
+    }
+}
+  
+/*
+    MAIN
+*/
+
+.main {
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+}
+
+.main h3{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.main a{
+    text-decoration: none;
+}
+
+.arrow{
+    display: grid;
+    justify-content: end;
+    color:black;
+    font-size: 25px;
+}
+
+
+/*
+    BUTTON ANIMATION
+*/
+.link-button {
+    display: inline-block;
+    padding: 16px 24px;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+  
+.link-button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+  
+
+/*
+  FOOTER
+*/
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+}
+  
+.footer_h5{
+    display:grid;
+    justify-content: end;
+    margin-right: -25px;
+}
+  
+.footer nav{
+    text-align: center;
+    margin-right: 30px;
+}
+  
+.footer a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    position: relative;
+}
+  
+.footer i{
+    position: absolute;
+}
+.youtube:hover { 
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.discord:hover {
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.instagram:hover {
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.twitter:hover {  
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+  
+hr {
+    width: 100%;
+}
