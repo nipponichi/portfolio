@@ -40,7 +40,7 @@ let body = document.body;
   document.addEventListener('DOMContentLoaded', () => {
     let formulario = document.getElementById('formulario');
     
-    //Al clickar enviar (tipo submit) se ejecuta esta funcion flecha
+    //Al clicar enviar (tipo submit) se ejecuta esta funcion flecha
     formulario.addEventListener('submit', (evento) => {
       evento.preventDefault();
     
