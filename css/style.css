@@ -68,19 +68,19 @@ header nav a:hover{
     font-size: 10px;
 }
 
-.mainMenu {
+.main_menu {
     grid-area: main;
     width: 100%;
     height: 100%;
 }
 
-.mainMenu h3{
+.main_menu h3{
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
-.mainMenu a{
+.main_menu a{
     text-decoration: none;
 }
 
@@ -88,7 +88,7 @@ header nav a:hover{
     BUTTON ANIMATION
 */
 
-.link-button {
+.link_button {
     display: inline-block;
     padding: 16px 24px;
     border-radius: 15px;
@@ -98,7 +98,7 @@ header nav a:hover{
     transition: all 0.3s ease;
 }
   
-.link-button:hover {
+.link_button:hover {
     background-color: black;
     color: white;
     border-color: white;
@@ -366,15 +366,6 @@ header nav a:hover{
     align-items: center;
 }
 
-
-/*
-.arrow{
-    display: grid;
-    justify-content: end;
-    color:black;
-    font-size: 25px;
-}*/
-
 .yo_mismo  {
     display: flex;
     flex-direction: column;
@@ -385,24 +376,67 @@ header nav a:hover{
     width: 700px;
     border-radius: 15px;
 }
-  
-.arrow_up{
-    display: flex;
-    justify-content: end;
-    padding: 25px;
+
+.go_top_container{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
 }
-  
-.arrow{
-    position: absolute;
+
+.go_top_button{
+    width:0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    cursor:pointer;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index: -1; 
+}
+
+.go_top_button i {
+    position:absolute;
+    font-size: 1.7rem;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
     color:black;
-    font-size: 20px;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go_top_button{
+    animation: popup .3 ease-in-out;
+    width:20px;
+    height: 20px;
+    z-index: 11;
+}
+
+.show i {
+    transform: translate(-50%, -50%) scale(1);
 }
   
-.arrow:hover{
-    font-size:25px;
-    transition: all 0.3s ease-in-out;
+@keyframes popup{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    50%{
+        width: 80px;
+        height: 80px;
+    }
+    100%{
+        width: 20px;
+        height: 20px;
+    }
 }
-  
 /*
     MAIN TABLE
 */
